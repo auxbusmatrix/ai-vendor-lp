@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Vendor LP — アドボケイトレビュー指摘レポート</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 13px;
+      color: #1a1a2e;
+      background: #fff;
+      padding: 40px 48px;
+      line-height: 1.7;
+    }
+
+    header {
+      border-bottom: 3px solid #1a1a2e;
+      padding-bottom: 16px;
+      margin-bottom: 32px;
+    }
+
+    header h1 {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    header .meta {
+      margin-top: 6px;
+      font-size: 12px;
+      color: #555;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #c8a96e;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 3px;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+
+    .section {
+      margin-bottom: 36px;
+    }
+
+    .section h2 {
+      font-size: 14px;
+      font-weight: 700;
+      border-left: 4px solid #c8a96e;
+      padding-left: 10px;
+      margin-bottom: 14px;
+      letter-spacing: 0.04em;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.5px;
+    }
+
+    thead th {
+      background: #1a1a2e;
+      color: #fff;
+      padding: 8px 12px;
+      text-align: left;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+
+    thead th:first-child { width: 36px; }
+    thead th:nth-child(2) { width: 46%; }
+
+    tbody tr:nth-child(even) { background: #f7f7fb; }
+
+    tbody td {
+      padding: 9px 12px;
+      border-bottom: 1px solid #e0e0e8;
+      vertical-align: top;
+    }
+
+    .num {
+      font-weight: 700;
+      color: #c8a96e;
+      text-align: center;
+    }
+
+    .fixed {
+      color: #2d7a4f;
+      font-size: 11px;
+    }
+    .fixed::before { content: "✓ "; font-weight: 700; }
+
+    footer {
+      margin-top: 48px;
+      border-top: 1px solid #ddd;
+      padding-top: 12px;
+      font-size: 11px;
+      color: #888;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .summary-box {
+      background: #f0f4ff;
+      border: 1px solid #c0c8e8;
+      border-radius: 6px;
+      padding: 14px 18px;
+      margin-bottom: 32px;
+      font-size: 12.5px;
+    }
+
+    .summary-box ul {
+      list-style: none;
+      margin-top: 8px;
+    }
+
+    .summary-box ul li {
+      padding: 3px 0;
+    }
+
+    .summary-box ul li::before {
+      content: "▸ ";
+      color: #c8a96e;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="badge">DESIGN REVIEW REPORT</div>
+  <h1>AI Vendor LP — アドボケイトレビュー指摘レポート</h1>
+  <p class="meta">作成日：2026年5月21日　|　対象：AI Vendor ランディングページ（index.html / styles.css）　|　ステータス：全件修正済み</p>
+</header>
+
+<div class="summary-box">
+  <strong>サマリー</strong>
+  <ul>
+    <li>指摘総件数：17件（景表法4件・アクセシビリティ7件・CV設計3件・パフォーマンス2件・その他1件）</li>
+    <li>全件修正完了。修正後ファイルを <code>~/.design-consultant/projects/ai-vendor/</code> に保存済み</li>
+    <li>景表法・WCAG AA・CV設計・パフォーマンスの4カテゴリで問題を検出</li>
+  </ul>
+</div>
+
+<!-- 景表法 -->
+<div class="section">
+  <h2>景表法・広告表示（A〜D）</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>指摘内容</th>
+        <th>修正後の対応</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="num">A</td>
+        <td>「97%満足度」「3.2ヶ月収益化」「1,200名」に調査根拠の注記がなかった</td>
+        <td class="fixed">※1・※2で調査対象・期間・集計方法を明記</td>
+      </tr>
+      <tr>
+        <td class="num">B</td>
+        <td>受講生の声（「月30万円の副収入」等）に個人差免責がなかった</td>
+        <td class="fixed">「成果には個人差があり…」免責文を追加</td>
+      </tr>
+      <tr>
+        <td class="num">C</td>
+        <td>返金保証の条件（期間・金額・手続き）が不明確だった</td>
+        <td class="fixed">「初回ログインから14日以内、決済手数料除く全額」と明記</td>
+      </tr>
+      <tr>
+        <td class="num">D</td>
+        <td>「残席わずか」という煽り表現に根拠がなかった</td>
+        <td class="fixed">「残席は変動します」注記を追加</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- WCAG AA -->
+<div class="section">
+  <h2>アクセシビリティ WCAG AA（E/F/G/I/J/K/M）</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>指摘内容</th>
+        <th>修正後の対応</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="num">E</td>
+        <td>一部テキストのコントラスト比が WCAG AA基準（4.5:1）未満だった</td>
+        <td class="fixed">CSSでコントラスト修正</td>
+      </tr>
+      <tr>
+        <td class="num">F</td>
+        <td>絵文字アイコンに aria-label がなかった（スクリーンリーダーで意味不明）</td>
+        <td class="fixed">role="img" aria-label="..." を追加</td>
+      </tr>
+      <tr>
+        <td class="num">G</td>
+        <td>スキップリンク（キーボードユーザー向けナビ飛ばし）がなかった</td>
+        <td class="fixed">&lt;a href="#main-content" class="skip-link"&gt; を追加</td>
+      </tr>
+      <tr>
+        <td class="num">I</td>
+        <td>&lt;main&gt; タグがなく、ページ構造がセマンティックでなかった</td>
+        <td class="fixed">&lt;main id="main-content"&gt; で全コンテンツを囲む構造に修正</td>
+      </tr>
+      <tr>
+        <td class="num">J</td>
+        <td>星評価（★★★★★）がテキストのみで読み上げ時に不明瞭だった</td>
+        <td class="fixed">aria-label="5点満点中5点" を追加</td>
+      </tr>
+      <tr>
+        <td class="num">K</td>
+        <td>フォームの必須項目マーク（*）が aria-hidden されていなかった</td>
+        <td class="fixed">&lt;span aria-hidden="true"&gt;*&lt;/span&gt; に修正</td>
+      </tr>
+      <tr>
+        <td class="num">M</td>
+        <td>送信ボタンのアイコン（→）がスクリーンリーダーに読まれていた</td>
+        <td class="fixed">&lt;span aria-hidden="true"&gt; でラップして読み上げ除外</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- CV設計 -->
+<div class="section">
+  <h2>CV設計・コンバージョン（O/P/Q）</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>指摘内容</th>
+        <th>修正後の対応</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="num">O</td>
+        <td>最終CTAにフォームがなく、ボタンだけで申込が完結しなかった</td>
+        <td class="fixed">名前・メール・プラン選択の &lt;form&gt; を実装</td>
+      </tr>
+      <tr>
+        <td class="num">P</td>
+        <td>申込ボタンにどのプランか識別できなかった</td>
+        <td class="fixed">href="#contact?plan=standard/premium" でプラン識別を追加</td>
+      </tr>
+      <tr>
+        <td class="num">Q</td>
+        <td>分割払いの目安金額が一切なかった（高額感を和らげる情報が不足）</td>
+        <td class="fixed">「月々約21,400円×6回」の目安を注記に追加</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- パフォーマンス -->
+<div class="section">
+  <h2>パフォーマンス（L/N）</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>指摘内容</th>
+        <th>修正後の対応</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="num">L</td>
+        <td>未使用のGoogleフォントが &lt;link&gt; に残っていてロードが重かった</td>
+        <td class="fixed">不要フォントを削除してロード軽量化</td>
+      </tr>
+      <tr>
+        <td class="num">N</td>
+        <td>ヒーローの背景グラデーションが重く、描画ブロックしていた</td>
+        <td class="fixed">CSSグラデーションを最適化</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<footer>
+  <span>AI Vendor — Design Consultant Review Report</span>
+  <span>© 2026 AI Vendor. Confidential.</span>
+</footer>
+
+</body>
+</html>
